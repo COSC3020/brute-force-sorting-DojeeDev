@@ -23,9 +23,9 @@ most important part. Add your answer to this markdown file.
 
 ### Analysis:
 
-The best case will be a list that is already sorted. This will take n! steps to generate the permuations, then n steps to check that the list is sorted. The way the code generates permuations means that if the list is already sorted, the first iteration of perumations is the same as the input, so will return a sorted list the fastest. Giving us a final time complexity of $n + n! \in \Theta(n!)$ For the best case input, a sorted list, we only need to check if the list is sorted 1 time which takes n steps.
+The best case will be a list that is already sorted. This will take n! steps to generate the permuations, then n steps to check that the list is sorted. The way the code generates permuations means that if the list is already sorted, the first iteration of perumations is the same as the input, so will return a sorted list the fastest. Giving us a final time complexity of $n + n! \in \Theta(n + n!)$ For the best case input, a sorted list, we only need to check if the list is sorted 1 time which takes n steps.
 
-Worst case would if the input is reverse sorted. Then we have to go to the end of the permutations to find the right list. That would give us $n! + n! \cdot n = n! (1+n) \in \Theta(n!)$
+Worst case would if the input is reverse sorted. Then we have to go to the end of the permutations to find the right list. That would give us $n! + n! \cdot n = n!(n+1) = (n+1)! \in \Theta ((n+1)!)$
 
 If we generated permutations randomly and didn't have a way to avoid duplicates we could theoritically run it forever since we couldn't be sure it would stop. If we used a random generator that avoids duplicates then the complexity would be n! since we dont generate all permutations. first.
 
