@@ -42,9 +42,3 @@ function permutationSort(array) {
     }
   }
 }
-
-
-
-console.log(perm([1,2,3]));
-console.log(perm([3,2,1]));
-  

@@ -23,9 +23,9 @@ most important part. Add your answer to this markdown file.
 
 ### Analysis:
 
-The best case for my algorithm would be $\Theta(1)$ if the input size is 1 or less as this will be returned as sorted in constant time. However, if we consider any input size, then the best case will be a list that is already sorted. This will take n! steps to generate the permuations, then n steps to check that the list is sorted. The way the code generates permuations means that if the list is already sorted, the first iteration of perumations is the same as the input, so will return a sorted list the fastest. Giving us a final time complexity of $n \cdot n! = (n+1)! \in\Theta(n!)$
+The best case will be a list that is already sorted. This will take n! steps to generate the permuations, then n steps to check that the list is sorted. The way the code generates permuations means that if the list is already sorted, the first iteration of perumations is the same as the input, so will return a sorted list the fastest. Giving us a final time complexity of $n + n! \in \Theta(n!)$ For the best case input, a sorted list, we only need to check if the list is sorted 1 time which takes n steps.
 
-Worst case would if the input is reverse sorted. Then we have to go to the end of the permutations to find the right list. That would give us $n! \cdot n! \cdot n = n!(n+1)! \in \Theta((n!)^2). $
+Worst case would if the input is reverse sorted. Then we have to go to the end of the permutations to find the right list. That would give us $n! + n! \cdot n = n! (1+n) \in \Theta(n!)$
 
 If we generated permutations randomly and didn't have a way to avoid duplicates we could theoritically run it forever since we couldn't be sure it would stop. If we used a random generator that avoids duplicates then the complexity would be n! since we dont generate all permutations. first.
 
@@ -52,3 +52,4 @@ If we generated permutations randomly and didn't have a way to avoid duplicates 
 
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+ 
