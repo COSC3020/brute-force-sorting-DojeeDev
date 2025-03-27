@@ -31,7 +31,9 @@ function isSorted(a) {
 
 
 function permutationSort(array) {
-  if (array.length == 0 || array.length == 1) { return 0; }
+  if (array.length == 0 || array.length == 1) { //MAKE ONELINE AGAIN IVAN
+    return 0;
+   }
 
   var perms = perm(array);
 
@@ -43,6 +45,8 @@ function permutationSort(array) {
   }
 }
 
-var x = [1,0];
 
 
+console.log(perm([1,2,3]));
+console.log(perm([3,2,1]));
+  
